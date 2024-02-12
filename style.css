@@ -1,4 +1,5 @@
 html {
-    width: 100%;
-    height: 100%;
+    width: 1587px;
+    height: 926px;
+    background-image: radial-gradient(circle at center, black, rgb(30, 29, 29), black);
 }
