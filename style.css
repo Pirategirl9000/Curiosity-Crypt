@@ -8,3 +8,11 @@ body {
     height: 926px;
     background: no-repeat center url("Cave_Outline.png");
 }
+
+#Playerhp {
+    color: green;
+}
+
+#Enemyhp {
+    color: red;
+}

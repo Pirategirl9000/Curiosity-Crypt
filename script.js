@@ -1,6 +1,6 @@
 alert("press 'f' to toggle fullscreen");
-let lvl = 1;
 let fsc = false;
+let enemy;
 
 document.addEventListener("keypress", (e) => {
     if (e.key == 'f' && !fsc) {
@@ -13,18 +13,30 @@ document.addEventListener("keypress", (e) => {
 });
 
 function spawnEnemy() {
-
+    let possibilites = getPossibleEnemies();
+    let r = Math.floor(Math.random() * ((possibilites.length - 1) - 1));
+    enemy = possibilites[r];
 }
 
 function getPossibleEnemies() {
     let arr;
 
-    if (lvl > 0 && lvl < 5) {
+    if (player.lvl > 0 && player.lvl < 5) {
         arr.push(new Basic_Goblin());
     }
 
     return arr;
 }
+
+class Player {
+    constructor() {
+        this.hp = 10;
+        this.attack = 3;
+        this.gold = 0;
+        this.lvl = 1;
+    }
+
+} const player = new Player();
 
 class Basic_Goblin {
     constructor() {
@@ -42,3 +54,4 @@ class Basic_Goblin {
         else {return 0;} //miss
     }
 }
+
