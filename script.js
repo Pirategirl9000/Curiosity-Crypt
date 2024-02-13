@@ -1,5 +1,5 @@
 alert("press 'f' to toggle fullscreen");
-
+let lvl = 1;
 let fsc = false;
 
 document.addEventListener("keypress", (e) => {
@@ -11,3 +11,34 @@ document.addEventListener("keypress", (e) => {
         fsc = false;
     }
 });
+
+function spawnEnemy() {
+
+}
+
+function getPossibleEnemies() {
+    let arr;
+
+    if (lvl > 0 && lvl < 5) {
+        arr.push(new Basic_Goblin());
+    }
+
+    return arr;
+}
+
+class Basic_Goblin {
+    constructor() {
+        this.hp = 5;
+        this.attack = 1;
+        this.gold = 1;
+        this.xp = 5;
+        this.image = "Curiosity_Crypt_Basic_Goblin.png";
+    }
+
+    rollAttack() {
+        let roll = Math.floor(Math.random() * (20 - 1 + 1) + 1);
+        if (roll >= 15) {return this.attack * 2;} //critical hit 
+        else if (roll > 5) {return this.attack;} //basic hit
+        else {return 0;} //miss
+    }
+}
