@@ -74,7 +74,7 @@ class Basic_Goblin {
         this.attack = 1;
         this.gold = 1;
         this.xp = 5;
-        this.image = "Curiosity_Crypt_Basic_Goblin.png";
+        this.image = "Basic_Goblin.png";
     }
     
     rollAttack() {
@@ -92,7 +92,7 @@ class Beserk_Goblin {
         this.attack = 5;
         this.gold = 20;
         this.xp = 100;
-        this.image = "Curiosity_Crypt_Beserk_Goblin.png";
+        this.image = "Beserk_Goblin.png";
     }
 
     rollAttack() {
@@ -110,7 +110,7 @@ class Mage_Goblin {
         this.attack = 4;
         this.gold = 5;
         this.xp = 25;
-        this.image = "Curiosity_Crypt_Mage_Goblin.png";
+        this.image = "Mage_Goblin.png";
     }
     rollAttack() {
         let roll = Math.floor(Math.random() * (20 - 1 + 1) + 1);
@@ -127,7 +127,7 @@ class Kluthulu {
         this.attack = 50;
         this.gold = 10000;
         this.xp = 10000;
-        this.image = "Curiosity_Crypt_Kluthulu.png";
+        this.image = "Kluthulu.png";
     }
     rollAttack() {
         let roll = Math.floor(Math.random() * (20 - 1 + 1) + 1);
