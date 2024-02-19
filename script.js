@@ -55,8 +55,10 @@ class Player {
     }
 
     levelUp() {
+        alert("LEVEL UP!");
         //Uses formula y=5 * 2^x
         this.maxHP *= 1.5
+        if (this.lvl % 5 == 0) {this.attack *= 2;} //every five levels attack dmg is doubled
         this.HP = this.maxHP;
         this.lvl++;
 
